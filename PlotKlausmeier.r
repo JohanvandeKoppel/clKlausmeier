@@ -7,7 +7,7 @@ require(fields)  # image.plot originates here
 setwd('/Simulations/OpenCL/clKlausmeier/clKlausmeier')
 
 # Parameter settings
-Movie     = on  # Whether movie
+Movie     = off  # Whether movie
 Wait      = off  # If on, the program waits after every frame
 # Figure window size, should match movie dimensions
 WinWidth  = 960  # Width of the figure window
