@@ -1,8 +1,8 @@
-# This is an Mussels project to show and test the usage of the FindOpenCL
+# This is an Klausmeier project to show and test the usage of the FindOpenCL
 # script.
 
 cmake_minimum_required( VERSION 2.6 )
-project( Mussels )
+project( Klausmeier )
 
 # This is only required for the script to work in the version control
 set(CMAKE_MODULE_PATH "${CMAKE_SOURCE_DIR}/../..")
@@ -18,17 +18,17 @@ else( OPENCL_HAS_CPP_BINDINGS )
 endif( OPENCL_HAS_CPP_BINDINGS )
 
 
-add_executable( Mussels 
+add_executable( Klausmeier 
                 Main_Program.cpp 
 		Device_Utilities.cpp)
 
-target_link_libraries( Mussels ${OPENCL_LIBRARIES} )
+target_link_libraries( Klausmeier ${OPENCL_LIBRARIES} )
 
 # Generating the data folder where the model stores its results
 file(MAKE_DIRECTORY ./build/Data)
 
 # Defining the "run" command (use as: make run) that runs the model
-add_custom_target(run ./Mussels)
+add_custom_target(run ./Klausmeier)
 
 # Defining the “destroy: command (use as: make wipe) that clears the build folder
 add_custom_target(destroy rm -rf ../build/*
